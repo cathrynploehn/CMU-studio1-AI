@@ -1,12 +1,14 @@
-trigger,response
-0,"Hi, How was your week?"
-I guess,"You guess? Sounds like you’re not sure it was okay. Can you tell me more about that?"
-"and guess who was there","Hmm …tell me who was there?"
-"Melissa my ex-girlfriend","How did seeing her make you feel?"
-"to another guy","Hmm… So you felt angry because you saw her talking to another guy. Was that your initial sight of her when you saw her talking to another guy?"
-"whatever","Tell me more."
-"they were flirting or something","It sounds like you were probably feeling a little jealous."
-"yes","A lot of people would feel that way. Was there more to your weekend that you wanted to talk about?"
-"you know.","Yeah. How do you feel right now?"
-"and that’s what you need to do","It’s very hard to lose your significant other and then see her with another person but I’m glad that you’re feeling more relaxed now."
-"to talk to you","That's a relief."
+trigger,response,valence,familiarity,expression
+0,"Hi, How was your week?",0,0,0
+I guess,You guess? Sounds like you’re not sure it was okay. Can you tell me more about that?,0,0,0
+and guess who was there,Hmm …tell me who was there?,0,0,0
+Melissa my ex-girlfriend,How did seeing her make you feel?,1,.6,.6
+to another guy,Hmm… So you felt angry because you saw her talking to another guy. Was that your initial sight of her when you saw her talking to another guy?,0,0,0
+whatever,Tell me more.,1,0.5,1
+I got like this excitement like, ,1,0,0
+ And I felt a little scared because I kind of wanted to approach her but I didn’t know how she was going to act, ,0.5,1,0.5
+they were flirting or something,It sounds like you were probably feeling a little jealous.,0.5,1,0.25
+yes,A lot of people would feel that way. Was there more to your weekend that you wanted to talk about?,0,0,0
+you know.,Yeah. How do you feel right now?,0,0,0
+and that’s what you need to do,It’s very hard to lose your significant other and then see her with another person but I’m glad that you’re feeling more relaxed now.,0,0.8,0
+to talk to you,That's a relief.,0,0,0
