@@ -99,7 +99,7 @@
 		    point: [0, 0],
 		    size: [paper.view.size.width, paper.view.size.height],
 		    strokeColor: '#000000',
-		    fillColor: '#030303',
+		    fillColor: '#fdf5ea',
 		    selected: false
 		});
 		rect.sendToBack();
@@ -109,7 +109,7 @@
 		    size: [paper.view.size.width, paper.view.size.height],
 		    fillColor: {
 			    gradient: {
-			        stops: [['rgba(200, 200, 200, 1)', 1],['rgba(0,0,0,0)', .5]]
+			        stops: [['rgba(54,33,3,1)', 1],['rgba(0,0,0,0)', .5]]
 			    },
 			    radial: true,
 			    origin: new paper.Point(paper.view.size.width/2, 0),
@@ -123,7 +123,7 @@
 		    size: [paper.view.size.width, paper.view.size.height],
 		    fillColor: {
 			    gradient: {
-			        stops: [['rgba(200, 200, 200, 1)', 1],['rgba(0,0,0,0)', .5]]
+			        stops: [['rgba(54,33,3,1)', 1],['rgba(0,0,0,0)', .5]]
 			    },
 			    radial: true,
 			    origin: new paper.Point(paper.view.size.width/2, paper.view.size.height),
@@ -223,7 +223,7 @@
 			pathGenerated.strokeWidth = 1;
 			pathGenerated.strokeColor = {
 			    gradient: {
-			        stops: [['rgba(0,0,0,0)', 0], ['white', .45],['rgba(0,0,0,0)', .47]]
+			        stops: [['rgba(253,245,234,0)', 0], ['rgba(51,31,4,1)', .45],['rgba(0,0,0,0)', .47]]
 			    },
 			    radial: true,
 			    origin: origin,
@@ -245,11 +245,14 @@
 
 		paper.view.onFrame = function(event) {
 			var level = mic.getLevel();
+			console.log(level);
 			if(aiSpeaking){
 				speakerGradient.fillColor.gradient.stops[0].color.alpha = 0; 
-				aiGradient.fillColor.gradient.stops[0].color.alpha = (level * .25);
+				aiGradient.fillColor.gradient.stops[0].color.alpha = (level);
+				// aiGradient.fillColor.gradient.stops[0].color.alpha = 1;
 			} else {
-				speakerGradient.fillColor.gradient.stops[0].color.alpha = (level * .25); 
+				speakerGradient.fillColor.gradient.stops[0].color.alpha = (level);
+				// speakerGradient.fillColor.gradient.stops[0].color.alpha = 1; 
 				aiGradient.fillColor.gradient.stops[0].color.alpha = 0;
 			}
 			
